@@ -28,7 +28,7 @@
             "level": 1.0,
             "motivation": 2.0,
             "_links": {
-              "self": {"href": "/skills/python"},
+              "self": {"href": "/skills/python"}
             }
           },
           {
@@ -37,9 +37,9 @@
             "level": 1.0,
             "motivation": 2.0,
             "_links": {
-              "self": {"href": "/skills/rest-api"},
+              "self": {"href": "/skills/rest-api"}
             }
-          },
+          }
     ]
   }
 }

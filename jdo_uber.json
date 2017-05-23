@@ -64,7 +64,7 @@
         "name": "search",
         "rel": ["http://employees.acme.com/rels/search"],
         "url": "http://api.employees.acme.com/people/search{?trigram}",
-        "templated": true,
+        "templated": true
       }
     ]
   }

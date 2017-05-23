@@ -39,7 +39,7 @@
               "title": "REST API skill"
             }
           }
-        },
+        }
   ],
   "@namespaces": {
     "acme": {
@@ -52,7 +52,7 @@
     },
     "acme:manager": {
       "title": "Manager",
-      "href": "http://api.employees.acme.com/people/ted",
+      "href": "http://api.employees.acme.com/people/ted"
     },
     "acme:search": {
       "title": "Search",
