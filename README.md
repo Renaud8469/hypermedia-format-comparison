@@ -32,7 +32,7 @@ The original document (as it could be served by any non-hypermedia "so-called-RE
           "name": "REST API",
           "level": 1.0,
           "motivation": 2.0
-        },
+        }
   ]
 }
 ```

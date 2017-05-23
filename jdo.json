@@ -12,7 +12,7 @@
   "leaving_date": null,
   "description": "I am a very nice person",
   "skills": [
-    {
+        {
           "category": "dev",
           "name": "Python",
           "level": 1.0,
