@@ -1,0 +1,71 @@
+{
+  "uber" :
+  {
+    "version" : "1.0",
+    "data": [
+      {"rel": "self", "url": "http://api.employees.acme.com/people/jdo"},
+      {
+        "name": "people",
+        "rel": ["people", "http://employees.acme.com/rels/people"],
+        "data": [
+          {"name": "trigram", "value": "JDO", "label": "Trigram"},
+          {"name": "first_name", "value": "John", "label": "First name"},
+          {"name": "last_name", "value": "Doe", "label": "Last name"},
+          {"name": "phone_numbers", "value": ["0102030405"], "label": "Phone numbers"},
+          {"name": "email", "value": "jdoe@acme.com", "label": "Email"},
+          {"name": "entry_date", "value": "2017-05-02" ,"label": "Entry date"},
+          {"name": "leaving_date", "value": null, "label": "Leaving date"},
+          {"name": "description", "value": "I am a very nice person"},
+
+          {
+            "name": "manager",
+            "rel": ["manager", "http://employees.acme.com/rels/manager"],
+            "url": "http://api.employees.acme.com/people/ted"
+          },
+          {
+            "name": "team",
+            "rel": ["team", "http://employees.acme.com/rels/team"],
+            "url": "http://api.employees.acme.com/team/soft"
+          },
+          {
+            "name": "skills",
+            "rel": ["skills", "http://employees.acme.com/rels/skills"],
+            "data": [
+              {
+                "name": "skills",
+                "url": "http://api.employees.acme.com/skills/python",
+                "data": [
+                    {"name": "category", "value": "dev", "label": "Category"},
+                    {"name": "name", "value": "Python", "label": "Name"},
+                    {"name": "level", "value": 1.0, "label": "Level"},
+                    {"name": "motivation", "value": 2.0, "label": "Motivation"}
+                  ]
+              },
+              {
+                "name": "skills",
+                "url": "http://api.employees.acme.com/skills/rest-api",
+                "data": [
+                  {"name": "category", "value": "dev", "label": "Category"},
+                  {"name": "name", "value": "REST API", "label": "Name"},
+                  {"name": "level", "value": 1.0, "label": "Level"},
+                  {"name": "motivation", "value": 2.0, "label": "Motivation"}
+                  ]
+              }]
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "rel": ["http://employees.acme.com/rels/create"],
+        "url": "http://api.employees.acme.com/people",
+        "action": "append"
+      },
+      {
+        "name": "search",
+        "rel": ["http://employees.acme.com/rels/search"],
+        "url": "http://api.employees.acme.com/people/search{?trigram}",
+        "templated": true,
+      }
+    ]
+  }
+}

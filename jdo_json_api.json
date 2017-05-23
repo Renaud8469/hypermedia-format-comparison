@@ -1,0 +1,72 @@
+{
+  "data":
+    {
+      "type": "people",
+      "id": "JDO",
+      "attributes": {
+        "trigram": "JDO",
+        "first_name": "John",
+        "last_name": "Doe",
+        "phone_numbers": [
+          "0102030405"
+        ],
+        "email": "jdoe@acme.com",
+        "team": "SOFT",
+        "entry_date": "2017-05-02",
+        "leaving_date": null,
+        "description": "I am a very nice person"
+      },
+      "relationships": {
+        "manager": {
+          "links": {
+            "self": "http://employees.acme.com/rels/manager",
+            "related": "http://api.employees.acme.com/people/ted"
+          },
+          "data": {
+            "type": "people", "id": "TED"
+          }
+        },
+        "skills": {
+          "links" : {
+            "self": "http://employees.acme.com/rels/skills",
+            "related": "http://api.employees.acme.com/people/jdo/skills"
+          },
+          "data": [
+            {"type": "skills", "id": "python"},
+            {"type": "skills", "id": "rest-api"}
+          ]
+        }
+      }
+    },
+  "links": {
+    "self": "http://api.employees.acme.com/people/jdo"
+  },
+  "included": [
+    {
+      "type": "skills",
+      "id": "python",
+      "attributes": {
+        "category": "dev",
+        "name": "Python",
+        "level": 1.0,
+        "motivation": 2.0
+      },
+      "links": {
+        "self": "http://api.employees.acme.com/skills/python"
+      }
+    },
+    {
+      "type": "skills",
+      "id": "rest-api",
+      "attributes": {
+        "category": "dev",
+        "name": "REST API",
+        "level": 1.0,
+        "motivation": 2.0
+      },
+      "links": {
+        "self": "http://api.employees.acme.com/skills/python"
+      }
+    }
+  ]
+}

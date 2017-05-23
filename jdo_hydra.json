@@ -1,0 +1,37 @@
+{
+  "@context" : {
+    "@vocab": "http://employees.acme.com/rels/",
+    "manager": { "@type": "@id" }
+  },
+  "@id": "http://api.employees.acme.com/people/jdo",
+  "trigram": "JDO",
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone_numbers": [
+    "0102030405"
+  ],
+  "email": "jdoe@acme.com",
+  "manager": {
+    "@id": "http://api.employees.acme.com/people/ted"
+  },
+  "team": "SOFT",
+  "entry_date": "2017-05-02",
+  "leaving_date": null,
+  "description": "I am a very nice person",
+  "skills": [
+    {
+      "@id": "http://api.employees.acme.com/skills/python",
+      "category": "dev",
+      "name": "Python",
+      "level": 1,
+      "motivation": 2
+    },
+    {
+      "@id": "http://api.employees.acme.com/skills/rest-api",
+      "category": "dev",
+      "name": "REST API",
+      "level": 1,
+      "motivation": 2
+    }
+  ]
+}

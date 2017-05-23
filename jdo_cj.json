@@ -1,0 +1,50 @@
+{
+  "collection":
+  {
+    "version": "1.0",
+    "href": "http://api.employees.acme.com/people",
+    "items": [
+      {
+        "href": "http://api.employees.acme.com/people/jdo",
+        "data": [
+          {"name": "trigram", "value": "JDO"}
+          {"name": "first_name", "value": "John"},
+          {"name": "last_name", "value": "Doe"},
+          {"name": "phone_numbers", "value": ["0102030405"]},
+          {"name": "email", "value": "jdoe@acme.com"},
+          {"name": "team", "value": "SOFT"},
+          {"name": "entry_date", "value": "2017-05-02"},
+          {"name": "leaving_date", "value": null},
+          {"name": "description", "value": "I am a very nice person"},
+        ],
+        "links": [
+          {"rel": "manager", "href": "http://api.employees.acme.com/people/ted", "prompt": "Manager"},
+          {"rel": "team", "href": "http://api.employees.acme.com/team/soft", "prompt": "Team"}
+          {"rel": "skills", "href": "http://api.employees.acme.com/people/jdo/skills", "prompt": "Skills"}
+        ]
+      }
+    ],
+    "queries" : [
+      {"rel" : "search", "href" : "http://api.employees.acme.com/people/search", "prompt" : "Search",
+        "data" : [
+          {"name" : "trigram", "value" : ""}
+        ]
+      }
+    ],
+    "template": {
+      "data": [
+        {"name": "entry_date", "prompt": "Entry date", "value": ""},
+        {"name": "manager", "prompt": "Manager", "value": ""},
+        {"name": "skills", "prompt": "Skills", "value": ""},
+        {"name": "leaving_date", "prompt": "Leaving date", "value": ""},
+        {"name": "description", "prompt": "Description", "value": ""},
+        {"name": "first_name", "prompt": "First name", "value": ""},
+        {"name": "phone_numbers", "prompt": "Phone numbers", "value": ""},
+        {"name": "trigram", "prompt": "Trigram", "value": ""},
+        {"name": "last_name", "prompt": "Last name", "value": ""},
+        {"name": "team", "prompt": "Team", "value": ""},
+        {"name": "email", "prompt": "Email", "value": ""}
+      ]
+    }
+  }
+}

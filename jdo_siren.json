@@ -1,0 +1,87 @@
+{
+  "class" : ["people"],
+  "properties": {
+    "trigram": "JDO",
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone_numbers": [
+      "0102030405"
+    ],
+    "email": "jdoe@acme.com",
+    "team": "SOFT",
+    "entry_date": "2017-05-02",
+    "leaving_date": null,
+    "description": "I am a very nice person"
+  },
+  "entities": [
+    {
+      "class": ["people"],
+      "rel": ["http://employees.acme.com/rels/manager"],
+      "href": "http://api.employees.acme.com/people/ted"
+    },
+    {
+      "class": ["skills", "collection"],
+      "rel": ["http://employees.acme.com/rels/skills"],
+      "entities": [
+        {
+          "class": ["skills"],
+          "properties": {
+            "category": "dev",
+            "name": "Python",
+            "level": 1.0,
+            "motivation": 2.0
+          },
+          "links":[
+            {"rel": ["self"], "href": "http://api.employees.acme.com/skills/python"}
+          ]
+        },
+        {
+          "class": ["skills"],
+          "properties": {
+            "category": "dev",
+            "name": "REST API",
+            "level": 1.0,
+            "motivation": 2.0
+          },
+          "links":[
+            {"rel": ["self"], "href": "http://api.employees.acme.com/skills/rest-api"}
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "add-acme",
+      "title": "Add Acme employee",
+      "method": "POST",
+      "href": "http://api.employees.acme.com/people",
+      "type": "application/json",
+      "fields": [
+        {"name": "entry_date", "type": "datetime"},
+        {"name": "manager", "type": "text"},
+        {"name": "skills"},
+        {"name": "leaving_date", "type": "datetime"},
+        {"name": "description", "type": "text"},
+        {"name": "first_name", "type": "text"},
+        {"name": "phone_numbers", "type": "text"},
+        {"name": "trigram", "type": "text"},
+        {"name": "last_name", "type": "text"},
+        {"name": "team", "type": "text"},
+        {"name": "email", "type": "email"}
+      ]
+    },
+    {
+      "name": "search-acme",
+      "title": "Search for an Acme employee",
+      "method": "GET",
+      "href": "http://api.employees.acme.com/people/search",
+      "fields": [
+        {"name": "query", "type": "text"}
+      ]
+    }
+  ],
+  "links": [
+    {"rel": ["self"], "href": "http://api.employees.acme.com/people/jdo"}
+  ]
+}

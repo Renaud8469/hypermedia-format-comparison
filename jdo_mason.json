@@ -1,0 +1,93 @@
+{
+  "@meta": {
+    "@title": "Acme employee: JDO",
+    "@description": "This resource represents an Acme employee whose trigram is JDO."
+  },
+
+  "trigram": "JDO",
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone_numbers": [
+    "0102030405"
+  ],
+  "email": "jdoe@acme.com",
+  "team": "SOFT",
+  "entry_date": "2017-05-02",
+  "leaving_date": null,
+  "description": "I am a very nice person",
+  "skills": [
+    {
+          "category": "dev",
+          "name": "Python",
+          "level": 1.0,
+          "motivation": 2.0,
+          "@controls": {
+            "self": {
+              "href": "http://api.employees.acme.com/skills/python",
+              "title": "Python skill"
+            }
+          }
+        },
+        {
+          "category": "dev",
+          "name": "REST API",
+          "level": 1.0,
+          "motivation": 2.0,
+          "@controls": {
+            "self": {
+              "href": "http://api.employees.acme.com/skills/rest-api",
+              "title": "REST API skill"
+            }
+          }
+        },
+  ],
+  "@namespaces": {
+    "acme": {
+      "name": "http://employees.acme.com/rels/"
+    }
+  },
+  "@controls": {
+    "self": {
+      "href": "http://api.employees.acme.com/people/jdo"
+    },
+    "acme:manager": {
+      "title": "Manager",
+      "href": "http://api.employees.acme.com/people/ted",
+    },
+    "acme:search": {
+      "title": "Search",
+      "href": "http://api.employees.acme.com/people/search{?trigram}",
+      "isHrefTemplate": true,
+      "description": "Search for an employee by trigram"
+    },
+    "create": {
+      "title": "Create",
+      "encoding": "json",
+      "href": "http://api.employees.acme.com/people",
+      "method": "POST",
+      "template":
+      {
+        "trigram": "JDO",
+        "first_name": "John",
+        "last_name": "Doe",
+        "phone_numbers": [
+          "0102030405"
+        ],
+        "email": "jdoe@acme.com",
+        "manager": "TED",
+        "team": "SOFT",
+        "entry_date": "2017-05-02",
+        "leaving_date": null,
+        "description": "I am a very nice person",
+        "skills": [
+              {
+                "category": "dev",
+                "name": "Python",
+                "level": 1.0,
+                "motivation": 2.0
+              }
+            ]
+      }
+    }
+  }
+}

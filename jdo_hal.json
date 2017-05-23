@@ -1,0 +1,45 @@
+{
+  "acme:trigram": "JDO",
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone_numbers": [
+    "0102030405"
+  ],
+  "email": "jdoe@acme.com",
+  "acme:team": "SOFT",
+  "entry_date": "2017-05-02",
+  "leaving_date": null,
+  "description": "I am a very nice person",
+
+  "_links": {
+    "self": {"href": "/people/jdo"},
+    "curies": [{"name": "acme", "href": "http://employees.acme.com/rels/{rel}", "templated": true}],
+    "acme:manager": {"href": "/people/ted", "title": "TED"},
+    "acme:search": {
+      "href": "/people/search{?trigram}"
+    }
+  },
+
+  "_embedded": {
+    "acme:skills": [
+      {
+            "category": "dev",
+            "name": "Python",
+            "level": 1.0,
+            "motivation": 2.0,
+            "_links": {
+              "self": {"href": "/skills/python"},
+            }
+          },
+          {
+            "category": "dev",
+            "name": "REST API",
+            "level": 1.0,
+            "motivation": 2.0,
+            "_links": {
+              "self": {"href": "/skills/rest-api"},
+            }
+          },
+    ]
+  }
+}
