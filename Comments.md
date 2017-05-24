@@ -131,8 +131,8 @@
 
 ### Pros
 
-
+- Easy to convert from the original JSON object 
 
 ### Cons
 
-- Lots of information in the OData specification, but not that much in the returned document. 
+- Lots of information in the OData specification, but not that much in the returned document. For example to find the skills you need to know the URL.

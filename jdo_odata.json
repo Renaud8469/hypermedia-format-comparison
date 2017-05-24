@@ -1,0 +1,19 @@
+{
+  "@odata.context": "http://employees.acme.com/rels/$metadata#People/$entity",
+  "@odata.id": "http://api.employees.acme.com/People('JDO')",
+  "@odata.etag": "08D1694BF26D2BC9",
+  "@odata.editLink": "http://api.employees.acme.com/People('JDO')",
+
+  "trigram": "JDO",
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone_numbers": [
+    "0102030405"
+  ],
+  "email": "jdoe@acme.com",
+  "manager": "TED",
+  "team": "SOFT",
+  "entry_date": "2017-05-02",
+  "leaving_date": null,
+  "description": "I am a very nice person"
+}
