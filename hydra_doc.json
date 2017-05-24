@@ -1,0 +1,74 @@
+{
+  "@context": "http://employees.acme.com/rels/",
+  "@id": "http://api.employees.acme.com/doc/#people",
+  "@type": "Class",
+  "title": "Employee",
+  "description": "An employee of ACME company",
+  "supportedProperty": [
+    {
+      "@type": "SupportedProperty",
+      "property": "#trigram",
+      "required": true,
+      "readable": true,
+      "writeable": false
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#first_name",
+      "required": true,
+      "readable": true,
+      "writeable": false
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#last_name",
+      "required": true,
+      "readable": true,
+      "writeable": false
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#phone_numbers",
+      "required": true,
+      "readable": true,
+      "writeable": true
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#email",
+      "required": true,
+      "readable": true,
+      "writeable": true
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#entry_date",
+      "required": true,
+      "readable": true,
+      "writeable": false
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#leaving_date",
+      "required": false,
+      "readable": true,
+      "writeable": true
+    },
+    {
+      "@type": "SupportedProperty",
+      "property": "#description",
+      "required": false,
+      "readable": true,
+      "writeable": true
+    }
+  ],
+  "supportedOperation" : [
+    {
+       "@type": "Operation",
+       "title": "Creates a new employee",
+       "method": "POST",
+       "expects": "http://api.employees.acme.com/doc/#people",
+       "returns": "http://api.employees.acme.com/doc/#people",
+    }
+  ]
+}

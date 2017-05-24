@@ -105,7 +105,7 @@
 ### Cons
 
 - Difficult to document the operation information : the only possible URL for that is the current one.
-- Need to put all additionnal info in specific documentation files
+- Need to put all additionnal info in specific documentation files. I wrote an example but this "doc" is by no way complete, it should contain the entire API, but my goal here was only to compare the representations of the same resource.
 
 
 ## Mason
@@ -123,4 +123,16 @@
 
 ### Cons
 
-- Large, hard-to-read file if all features are used 
+- Large, hard-to-read file if all features are used
+
+
+
+## OData
+
+### Pros
+
+
+
+### Cons
+
+- Lots of information in the OData specification, but not that much in the returned document. 
